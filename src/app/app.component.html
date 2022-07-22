@@ -1,4 +1,13 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<h2>Car owned by each one</h2>
+<table>
+  <tr>
+    <th *ngFor="let header of headers">
+      {{ header }}
+    </th>
+  </tr>
+  <tr *ngFor="let detail of details">
+    <td *ngFor="let header of headers">
+      {{ detail[header] }}
+    </td>
+  </tr>
+</table>
